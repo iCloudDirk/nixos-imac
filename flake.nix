@@ -27,7 +27,7 @@
     theLCVariables = "nl_BE.UTF-8";
     theTimezone = "Europe/Brussels";
     theme = "nord";
-    waybarStyle = "style2"; # can be style1-2
+    waybarStyle = "style1"; # can be style1-2
     browser = "brave";
     wallpaperGit = "https://gitlab.com/Zaney/my-wallpapers.git";
     wallpaperDir = "/home/${username}/Pictures/Wallpapers";

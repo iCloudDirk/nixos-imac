@@ -13,6 +13,15 @@
   # Enable networking
   networking.hostName = "${hostname}"; # Define your hostname
   networking.networkmanager.enable = true;
+  networking.wireless.enable = true;
+
+  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
+  # (the default) this is the recommended approach. When using systemd-networkd it's
+  # still possible to use this option, but it's recommended to use it in conjunction
+  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
+  networking.useDHCP = lib.mkDefault false;
+  networking.interfaces.enp4s0f0.useDHCP = lib.mkDefault true;
+  networking.interfaces.wlp3s0.useDHCP = lib.mkDefault true;
 
   # Set your time zone
   time.timeZone = "${theTimezone}";
